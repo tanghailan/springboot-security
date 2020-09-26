@@ -26,10 +26,10 @@ public class SysRoleUserTableController {
     @Resource
     private SysRoleUserTableService userTableService;
 
-    @GetMapping("/getUserList")
-    public Result getUserList(){
+    @GetMapping("/getRoleUserList")
+    public Result getRoleUserList(){
         List<SysRoleUserTable> list = userTableService.list();
-        return Result.ok().data("users",list);
+        return Result.ok().data("roleUserList",list);
 
     }
 
